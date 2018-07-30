@@ -33,5 +33,5 @@ var stringifyJSON = function(obj) {
       var res = '{' + inside + '}';
     }
   }
-  return  res;
+  return res;
 };
