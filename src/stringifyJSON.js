@@ -19,14 +19,9 @@ var stringifyJSON = function(obj) {
         inside.push(stringifyJSON(element));
       });
       var res = '[' + inside + ']';
-
-    
-      // return '[' + res + ']';
     } else { //Object if False
       var inside = [];
       for (key in obj) {
-        
-
         if (typeof obj[key] !== 'function' && obj[key] !== undefined) {
           var value = obj[key];
           var keyStr = stringifyJSON(key);
@@ -34,18 +29,9 @@ var stringifyJSON = function(obj) {
           var pair = keyStr + ':' + valStr;
           inside.push(pair);
         }
-
-        
-
       }
       var res = '{' + inside + '}';
     }
   }
-  console.log(res);
-
-
-  //answer cheat
-  // ans = JSON.stringify(obj);
-  // console.log('cheat:' + ans);
   return  res;
 };
